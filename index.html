@@ -840,16 +840,61 @@
 </footer>
 
 <script>
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        const btn = e.target.querySelector('.form-submit');
-        btn.textContent = 'Message Sent! I\'ll be in touch soon.';
-        btn.style.background = '#276749';
-        setTimeout(() => {
-            btn.textContent = 'Get My Free Pre-Approval →';
-            btn.style.background = '';
-            e.target.reset();
-        }, 4000);
+        const form = e.target;
+        const btn = form.querySelector('.form-submit');
+
+        btn.textContent = 'Submitting...';
+        btn.disabled = true;
+
+        const portalId = '245340064';
+        const formId  = 'bd7ac999-988e-4e22-9c3f-7e68c446721b';
+        const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
+
+        const payload = {
+            fields: [
+                { name: 'firstname',  value: form.firstName.value.trim() },
+                { name: 'lastname',   value: form.lastName.value.trim() },
+                { name: 'email',      value: form.email.value.trim() },
+                { name: 'phone',      value: form.phone.value.trim() },
+                { name: 'loan_type',  value: form.loanType.value },
+                { name: 'message',    value: form.message.value.trim() }
+            ],
+            context: {
+                pageUri:  window.location.href,
+                pageName: document.title
+            }
+        };
+
+        try {
+            const res = await fetch(endpoint, {
+                method:  'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body:    JSON.stringify(payload)
+            });
+
+            if (res.ok) {
+                btn.textContent = '✓ Submitted! I\'ll be in touch within 24 hours.';
+                btn.style.background = '#276749';
+                form.reset();
+                setTimeout(() => {
+                    btn.textContent = 'Get My Free Pre-Approval →';
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 5000);
+            } else {
+                throw new Error('Submission failed');
+            }
+        } catch {
+            btn.textContent = 'Something went wrong — please call or email me directly.';
+            btn.style.background = '#c53030';
+            btn.disabled = false;
+            setTimeout(() => {
+                btn.textContent = 'Get My Free Pre-Approval →';
+                btn.style.background = '';
+            }, 5000);
+        }
     }
 </script>
 
