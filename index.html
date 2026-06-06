@@ -223,7 +223,30 @@
         .appt-confirm-btn:hover { background: var(--navy-dark); }
         /* Success */
         .appt-success-view { text-align: center; padding: 3rem 1rem; display: none; }
-        .bookings-wrap { margin-top: 2.5rem; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 8px 40px rgba(0,0,0,0.07); background: white; }
+        .bookings-card { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: white; border: 1px solid #e2e8f0; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 48px rgba(0,0,0,0.08); max-width: 860px; }
+        .bookings-info { padding: 3rem 2.5rem; background: var(--navy-dark); }
+        .bookings-info-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+        .bookings-info-title { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; color: white; line-height: 1.25; margin-bottom: 2rem; }
+        .bookings-detail-row { display: flex; align-items: flex-start; gap: 0.875rem; margin-bottom: 1.25rem; }
+        .bookings-detail-icon { width: 36px; height: 36px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0; }
+        .bookings-detail-label { font-size: 0.72rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.15rem; }
+        .bookings-detail-value { font-size: 0.875rem; color: rgba(255,255,255,0.85); font-weight: 500; line-height: 1.5; }
+        .bookings-cta { padding: 3rem 2.5rem; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 1.5rem; }
+        .bookings-cta-head { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.25rem; }
+        .bookings-cta-sub { font-size: 0.875rem; color: var(--text-light); line-height: 1.65; }
+        .bookings-avail { display: flex; flex-direction: column; gap: 0.5rem; }
+        .bookings-avail-row { display: flex; align-items: center; gap: 0.625rem; font-size: 0.82rem; color: var(--text); }
+        .bookings-avail-dot { width: 8px; height: 8px; background: #48bb78; border-radius: 50%; flex-shrink: 0; }
+        .bookings-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--navy); color: white; padding: 1rem 2rem; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 20px rgba(15,36,64,0.25); }
+        .bookings-btn:hover { background: var(--navy-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(15,36,64,0.3); color: white; }
+        .bookings-btn-arrow { font-size: 1.1rem; }
+        .bookings-note { font-size: 0.72rem; color: #a0aec0; line-height: 1.6; }
+        @media (max-width: 680px) {
+            .bookings-card { grid-template-columns: 1fr; }
+            .bookings-info { padding: 2rem 1.75rem; }
+            .bookings-cta { padding: 2rem 1.75rem; }
+            .bookings-btn { width: 100%; justify-content: center; }
+        }
 
         /* ── Process ── */
         .process { background: var(--light); }
@@ -509,17 +532,46 @@
         <h2 class="section-title">Book a Free Consultation</h2>
         <p class="section-subtitle">Select a date and time — available Tuesday through Thursday.</p>
 
-        <div class="bookings-wrap">
-            <iframe src="https://outlook.office.com/book/RaafayHussainMortgageConsultation@drewmortgage.com/?ismsaljsauthenabled"
-                    title="Book a Free Mortgage Consultation with Raafay Hussain"
-                    width="100%" height="700" scrolling="yes" frameborder="0">
-            </iframe>
+        <div class="bookings-card">
+            <!-- Left: meeting details -->
+            <div class="bookings-info">
+                <div class="bookings-info-tag">Free Consultation</div>
+                <div class="bookings-info-title">Free Mortgage<br>Consultation</div>
+                <div class="bookings-detail-row">
+                    <div class="bookings-detail-icon">&#128336;</div>
+                    <div><div class="bookings-detail-label">Duration</div><div class="bookings-detail-value">30 minutes</div></div>
+                </div>
+                <div class="bookings-detail-row">
+                    <div class="bookings-detail-icon">&#128205;</div>
+                    <div><div class="bookings-detail-label">Location</div><div class="bookings-detail-value">In-Person · Drew Mortgage Associates<br>196 Boston Turnpike Rd<br>Shrewsbury, MA 01545</div></div>
+                </div>
+                <div class="bookings-detail-row">
+                    <div class="bookings-detail-icon">&#128197;</div>
+                    <div><div class="bookings-detail-label">Availability</div><div class="bookings-detail-value">Tuesday – Thursday</div></div>
+                </div>
+                <div class="bookings-detail-row">
+                    <div class="bookings-detail-icon">&#9989;</div>
+                    <div><div class="bookings-detail-label">Cost</div><div class="bookings-detail-value">No cost · No obligation</div></div>
+                </div>
+            </div>
+            <!-- Right: CTA -->
+            <div class="bookings-cta">
+                <div>
+                    <div class="bookings-cta-head">Ready to get started?</div>
+                    <div class="bookings-cta-sub">Pick a date and time that works for you. You'll receive a confirmation and calendar invite immediately after booking.</div>
+                </div>
+                <div class="bookings-avail">
+                    <div class="bookings-avail-row"><div class="bookings-avail-dot"></div>9:00 AM &nbsp;·&nbsp; 11:00 AM &nbsp;·&nbsp; 1:00 PM &nbsp;·&nbsp; 3:00 PM</div>
+                    <div class="bookings-avail-row"><div class="bookings-avail-dot"></div>Tuesday, Wednesday &amp; Thursday</div>
+                    <div class="bookings-avail-row"><div class="bookings-avail-dot"></div>Synced to Outlook calendar in real time</div>
+                </div>
+                <a href="https://outlook.office.com/book/RaafayHussainMortgageConsultation@drewmortgage.com/?ismsaljsauthenabled"
+                   target="_blank" class="bookings-btn">
+                    Book My Appointment <span class="bookings-btn-arrow">&#8599;</span>
+                </a>
+                <div class="bookings-note">Opens Microsoft Bookings — your appointment goes directly into Raafay's Outlook calendar and you'll receive an email confirmation.</div>
+            </div>
         </div>
-        <p style="text-align:center;margin-top:1rem;font-size:0.85rem;color:var(--text-light)">
-            Having trouble with the scheduler?
-            <a href="https://outlook.office.com/book/RaafayHussainMortgageConsultation@drewmortgage.com/?ismsaljsauthenabled"
-               target="_blank" style="color:var(--navy);font-weight:600;">Open booking page directly &#8599;</a>
-        </p>
     </div>
 </section>
 
