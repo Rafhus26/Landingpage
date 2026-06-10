@@ -327,6 +327,21 @@
         .form-submit:hover { background: var(--navy-dark); transform: translateY(-1px); }
         .form-disclaimer { font-size: 0.7rem; color: var(--text-light); margin-top: 0.75rem; line-height: 1.6; }
 
+        /* ── Sticky CTA Bar ── */
+        .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: var(--navy-dark); border-top: 2px solid var(--gold); z-index: 998; padding: 0.875rem 2rem; box-shadow: 0 -4px 24px rgba(0,0,0,0.25); transform: translateY(100%); transition: transform 0.4s; }
+        .sticky-cta.visible { transform: translateY(0); }
+        .sticky-cta-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .sticky-cta-text { color: rgba(255,255,255,0.75); font-size: 0.875rem; }
+        .sticky-cta-text strong { color: var(--gold); }
+        .sticky-cta-btns { display: flex; gap: 0.75rem; flex-shrink: 0; }
+        .sticky-btn-gold { background: var(--gold); color: var(--navy-dark); padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 700; font-size: 0.875rem; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+        .sticky-btn-gold:hover { background: var(--gold-light); }
+        .sticky-btn-white { background: transparent; color: white; padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 600; font-size: 0.875rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.3); transition: all 0.2s; white-space: nowrap; }
+        .sticky-btn-white:hover { border-color: var(--gold); color: var(--gold); }
+        .sticky-cta-close { background: none; border: none; color: rgba(255,255,255,0.4); cursor: pointer; font-size: 1.1rem; padding: 0 0 0 0.5rem; line-height: 1; flex-shrink: 0; }
+        .sticky-cta-close:hover { color: white; }
+        @media (max-width: 600px) { .sticky-cta-text { display: none; } .sticky-cta-btns { width: 100%; } .sticky-btn-gold, .sticky-btn-white { flex: 1; text-align: center; } }
+
         /* ── Footer ── */
         footer { background: var(--navy-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; }
         .footer-inner { max-width: 1200px; margin: 0 auto; }
@@ -498,81 +513,6 @@
     </div>
 </section>
 
-<!-- ── Photo Banner ── -->
-<div class="photo-banner">
-    <div class="photo-banner-inner">
-        <h2 class="photo-banner-title">Your <span>Dream Home</span> Is Closer Than You Think</h2>
-        <p class="photo-banner-sub">Whether you're buying your first home or your fifth, I'll find the right loan to make it happen — with clear guidance every step of the way.</p>
-        <a href="https://idp.elliemae.com/authorize?site_id=9111932669&response_type=code&redirect_uri=https%3A%2F%2Fdrewmortgage.mymortgage-online.com%2Fborrower-app%2Flogin%2F%3Flar%3Damohamed%26workFlowId%3D50152%26dest%3D%2Floan-app%2F%26guestuser%3D1%26siteId%3D9111932669&client_id=srtrz0d2&scope=ccbp%20cc&instance_id=be11171033&logo_url=https%3A%2F%2Fstore.asset.ecc.mortgagetech.ice.com%2Fd2a927b6-b5a4-45aa-b0df-c8dc6c5ccf44&logo_url_href=https%3A%2F%2Fwww.drewmortgage.com%2F&logo_alt_text=Logo&bust=90&apiBaseUrl=https://api.elliemae.com" target="_blank" class="btn-primary">Start Your Application</a>
-    </div>
-</div>
-
-<!-- ── About ── -->
-<section id="about">
-    <div class="section-inner">
-        <div class="section-tag">About Me</div>
-        <h2 class="section-title">A Loan Officer Who Puts You First</h2>
-        <div class="about-grid">
-            <div class="about-photo">
-                <div class="headshot-wrap"><img src="headshot.jpg" alt="Raafay Hussain - Mortgage Loan Officer"></div>
-                <div class="headshot-name">Raafay J. Hussain</div>
-                <div class="headshot-title">Mortgage Loan Officer · NMLS# 2623740</div>
-            </div>
-            <div class="about-text">
-                <p>As a licensed Mortgage Loan Officer at Drew Mortgage Associates Inc. in Shrewsbury, MA, I am committed to making the mortgage process as smooth, transparent, and stress-free as possible.</p>
-                <p>Whether you're purchasing your first home, upgrading to your dream property, or looking to refinance, I work closely with each client to find the right loan solution — not a one-size-fits-all approach.</p>
-                <p>I believe that every client deserves clear answers, honest advice, and a dedicated advocate in their corner from application to closing.</p>
-                <div class="about-highlights">
-                    <div class="highlight-item"><div class="highlight-dot"></div><span class="highlight-text">Personalized guidance from application through closing</span></div>
-                    <div class="highlight-item"><div class="highlight-dot"></div><span class="highlight-text">Access to a wide range of loan products and programs</span></div>
-                    <div class="highlight-item"><div class="highlight-dot"></div><span class="highlight-text">Clear communication — no jargon, no surprises</span></div>
-                    <div class="highlight-item"><div class="highlight-dot"></div><span class="highlight-text">Licensed to serve clients in Massachusetts and Florida</span></div>
-                </div>
-            </div>
-            <div class="about-visual">
-                <div class="about-visual-title">Licensing &amp; Credentials</div>
-                <div class="license-item"><span class="license-label">Loan Officer</span><span class="license-value">Raafay J. Hussain</span></div>
-                <div class="license-item"><span class="license-label">Personal NMLS#</span><span class="license-value">2623740</span></div>
-                <div class="license-item"><span class="license-label">Company</span><span class="license-value">Drew Mortgage Associates Inc.</span></div>
-                <div class="license-item"><span class="license-label">Company NMLS#</span><span class="license-value">2856</span></div>
-                <div class="license-item"><span class="license-label">MA License</span><span class="license-badge">Active</span></div>
-                <div class="license-item"><span class="license-label">FL License</span><span class="license-badge">Active</span></div>
-                <div class="license-item"><span class="license-label">Address</span><span class="license-value">196 Boston Turnpike Rd, Shrewsbury, MA 01545</span></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ── Gallery ── -->
-<section class="gallery">
-    <div class="section-inner">
-        <div class="section-tag">Find Your Place</div>
-        <h2 class="section-title">Helping You Find Home</h2>
-        <p class="section-subtitle">From cozy starter homes to spacious family properties, I help clients finance the home that fits their lifestyle.</p>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80" alt="Suburban home"><div class="gallery-item-overlay"></div></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Modern home"><div class="gallery-item-overlay"></div></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80" alt="Classic home"><div class="gallery-item-overlay"></div></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&q=80" alt="Residential property"><div class="gallery-item-overlay"></div></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Luxury home"><div class="gallery-item-overlay"></div></div>
-        </div>
-    </div>
-</section>
-
-<!-- ── Testimonials ── -->
-<section class="testimonials" id="testimonials">
-    <div class="section-inner">
-        <div class="section-tag">Client Stories</div>
-        <h2 class="section-title">Real People. Real Results.</h2>
-        <p class="section-subtitle">Here's what clients say about working with me from first call to closing day.</p>
-        <div class="testimonials-grid">
-            <div class="testimonial-card"><span class="testimonial-quote-mark">&ldquo;</span><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">Raafay made the entire process so easy. As a first-time buyer I had no idea where to start, but he walked me through every single step with patience and clarity. We closed in under 30 days!</p><div class="testimonial-author"><div class="testimonial-initials">SM</div><div><div class="testimonial-name">Sarah M.</div><div class="testimonial-detail">First-Time Buyer · Worcester, MA</div></div></div></div>
-            <div class="testimonial-card"><span class="testimonial-quote-mark">&ldquo;</span><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">I'm self-employed and thought getting a mortgage would be impossible. Raafay found me a bank statement loan and made it happen. I now own the home I always wanted. He's the best in the business.</p><div class="testimonial-author"><div class="testimonial-initials">MT</div><div><div class="testimonial-name">Michael T.</div><div class="testimonial-detail">Business Owner · Boston, MA</div></div></div></div>
-            <div class="testimonial-card"><span class="testimonial-quote-mark">&ldquo;</span><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">We refinanced with Raafay and saved over $400 a month. He was always available, answered every question, and explained everything in plain English. I'll never use anyone else.</p><div class="testimonial-author"><div class="testimonial-initials">JK</div><div><div class="testimonial-name">Jennifer K.</div><div class="testimonial-detail">Homeowner · Tampa, FL</div></div></div></div>
-        </div>
-    </div>
-</section>
-
 <!-- ── Appointment Booking ── -->
 <section class="appointments" id="appointments">
     <div class="section-inner">
@@ -623,17 +563,47 @@
     </div>
 </section>
 
-<!-- ── Process ── -->
-<section class="process" id="process">
+<!-- ── Photo Banner ── -->
+<div class="photo-banner">
+    <div class="photo-banner-inner">
+        <h2 class="photo-banner-title">Your <span>Dream Home</span> Is Closer Than You Think</h2>
+        <p class="photo-banner-sub">Whether you're buying your first home or your fifth, I'll find the right loan to make it happen — with clear guidance every step of the way.</p>
+        <a href="https://idp.elliemae.com/authorize?site_id=9111932669&response_type=code&redirect_uri=https%3A%2F%2Fdrewmortgage.mymortgage-online.com%2Fborrower-app%2Flogin%2F%3Flar%3Damohamed%26workFlowId%3D50152%26dest%3D%2Floan-app%2F%26guestuser%3D1%26siteId%3D9111932669&client_id=srtrz0d2&scope=ccbp%20cc&instance_id=be11171033&logo_url=https%3A%2F%2Fstore.asset.ecc.mortgagetech.ice.com%2Fd2a927b6-b5a4-45aa-b0df-c8dc6c5ccf44&logo_url_href=https%3A%2F%2Fwww.drewmortgage.com%2F&logo_alt_text=Logo&bust=90&apiBaseUrl=https://api.elliemae.com" target="_blank" class="btn-primary">Start Your Application</a>
+    </div>
+</div>
+
+<!-- ── About ── -->
+<section id="about">
     <div class="section-inner">
-        <div class="section-tag">How It Works</div>
-        <h2 class="section-title">Simple Steps to Your New Home</h2>
-        <p class="section-subtitle">I guide you through every step of the mortgage process so you always know exactly what's coming next.</p>
-        <div class="process-steps">
-            <div class="process-step"><div class="step-number">1</div><div class="step-title">Free Consultation</div><p class="step-desc">We discuss your goals, finances, and timeline to identify the best loan options for your situation.</p></div>
-            <div class="process-step"><div class="step-number">2</div><div class="step-title">Pre-Approval</div><p class="step-desc">Receive a pre-approval letter so you can shop for your home with confidence and a clear budget.</p></div>
-            <div class="process-step"><div class="step-number">3</div><div class="step-title">Processing &amp; Underwriting</div><p class="step-desc">I handle the paperwork and coordinate directly with underwriting to keep everything on track.</p></div>
-            <div class="process-step"><div class="step-number">4</div><div class="step-title">Close &amp; Move In</div><p class="step-desc">Sign your final documents, receive your keys, and celebrate becoming a homeowner.</p></div>
+        <div class="section-tag">About Me</div>
+        <h2 class="section-title">A Loan Officer Who Puts You First</h2>
+        <div class="about-grid">
+            <div class="about-photo">
+                <div class="headshot-wrap"><img src="headshot.jpg" alt="Raafay Hussain - Mortgage Loan Officer"></div>
+                <div class="headshot-name">Raafay J. Hussain</div>
+                <div class="headshot-title">Mortgage Loan Officer · NMLS# 2623740</div>
+            </div>
+            <div class="about-text">
+                <p>As a licensed Mortgage Loan Officer at Drew Mortgage Associates Inc. in Shrewsbury, MA, I am committed to making the mortgage process as smooth, transparent, and stress-free as possible.</p>
+                <p>Whether you're purchasing your first home, upgrading to your dream property, or looking to refinance, I work closely with each client to find the right loan solution — not a one-size-fits-all approach.</p>
+                <p>I believe that every client deserves clear answers, honest advice, and a dedicated advocate in their corner from application to closing.</p>
+                <div class="about-highlights">
+                    <div class="highlight-item"><div class="highlight-dot"></div><span class="highlight-text">Personalized guidance from application through closing</span></div>
+                    <div class="highlight-item"><div class="highlight-dot"></div><span class="highlight-text">Access to a wide range of loan products and programs</span></div>
+                    <div class="highlight-item"><div class="highlight-dot"></div><span class="highlight-text">Clear communication — no jargon, no surprises</span></div>
+                    <div class="highlight-item"><div class="highlight-dot"></div><span class="highlight-text">Licensed to serve clients in Massachusetts and Florida</span></div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="about-visual-title">Licensing &amp; Credentials</div>
+                <div class="license-item"><span class="license-label">Loan Officer</span><span class="license-value">Raafay J. Hussain</span></div>
+                <div class="license-item"><span class="license-label">Personal NMLS#</span><span class="license-value">2623740</span></div>
+                <div class="license-item"><span class="license-label">Company</span><span class="license-value">Drew Mortgage Associates Inc.</span></div>
+                <div class="license-item"><span class="license-label">Company NMLS#</span><span class="license-value">2856</span></div>
+                <div class="license-item"><span class="license-label">MA License</span><span class="license-badge">Active</span></div>
+                <div class="license-item"><span class="license-label">FL License</span><span class="license-badge">Active</span></div>
+                <div class="license-item"><span class="license-label">Address</span><span class="license-value">196 Boston Turnpike Rd, Shrewsbury, MA 01545</span></div>
+            </div>
         </div>
     </div>
 </section>
@@ -683,6 +653,51 @@
                     <p class="form-disclaimer">By submitting this form, you consent to be contacted by Raafay J. Hussain (NMLS# 2623740) at Drew Mortgage Associates Inc. (NMLS# 2856) regarding your mortgage inquiry. Submission of this form does not constitute a loan application or commitment to lend. All loans subject to credit approval. Not all applicants will qualify.</p>
                 </form>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Gallery ── -->
+<section class="gallery">
+    <div class="section-inner">
+        <div class="section-tag">Find Your Place</div>
+        <h2 class="section-title">Helping You Find Home</h2>
+        <p class="section-subtitle">From cozy starter homes to spacious family properties, I help clients finance the home that fits their lifestyle.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80" alt="Suburban home"><div class="gallery-item-overlay"></div></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Modern home"><div class="gallery-item-overlay"></div></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80" alt="Classic home"><div class="gallery-item-overlay"></div></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&q=80" alt="Residential property"><div class="gallery-item-overlay"></div></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Luxury home"><div class="gallery-item-overlay"></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Testimonials ── -->
+<section class="testimonials" id="testimonials">
+    <div class="section-inner">
+        <div class="section-tag">Client Stories</div>
+        <h2 class="section-title">Real People. Real Results.</h2>
+        <p class="section-subtitle">Here's what clients say about working with me from first call to closing day.</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card"><span class="testimonial-quote-mark">&ldquo;</span><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">Raafay made the entire process so easy. As a first-time buyer I had no idea where to start, but he walked me through every single step with patience and clarity. We closed in under 30 days!</p><div class="testimonial-author"><div class="testimonial-initials">SM</div><div><div class="testimonial-name">Sarah M.</div><div class="testimonial-detail">First-Time Buyer · Worcester, MA</div></div></div></div>
+            <div class="testimonial-card"><span class="testimonial-quote-mark">&ldquo;</span><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">I'm self-employed and thought getting a mortgage would be impossible. Raafay found me a bank statement loan and made it happen. I now own the home I always wanted. He's the best in the business.</p><div class="testimonial-author"><div class="testimonial-initials">MT</div><div><div class="testimonial-name">Michael T.</div><div class="testimonial-detail">Business Owner · Boston, MA</div></div></div></div>
+            <div class="testimonial-card"><span class="testimonial-quote-mark">&ldquo;</span><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">We refinanced with Raafay and saved over $400 a month. He was always available, answered every question, and explained everything in plain English. I'll never use anyone else.</p><div class="testimonial-author"><div class="testimonial-initials">JK</div><div><div class="testimonial-name">Jennifer K.</div><div class="testimonial-detail">Homeowner · Tampa, FL</div></div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Process ── -->
+<section class="process" id="process">
+    <div class="section-inner">
+        <div class="section-tag">How It Works</div>
+        <h2 class="section-title">Simple Steps to Your New Home</h2>
+        <p class="section-subtitle">I guide you through every step of the mortgage process so you always know exactly what's coming next.</p>
+        <div class="process-steps">
+            <div class="process-step"><div class="step-number">1</div><div class="step-title">Free Consultation</div><p class="step-desc">We discuss your goals, finances, and timeline to identify the best loan options for your situation.</p></div>
+            <div class="process-step"><div class="step-number">2</div><div class="step-title">Pre-Approval</div><p class="step-desc">Receive a pre-approval letter so you can shop for your home with confidence and a clear budget.</p></div>
+            <div class="process-step"><div class="step-number">3</div><div class="step-title">Processing &amp; Underwriting</div><p class="step-desc">I handle the paperwork and coordinate directly with underwriting to keep everything on track.</p></div>
+            <div class="process-step"><div class="step-number">4</div><div class="step-title">Close &amp; Move In</div><p class="step-desc">Sign your final documents, receive your keys, and celebrate becoming a homeowner.</p></div>
         </div>
     </div>
 </section>
@@ -907,7 +922,34 @@
     }
 
     window.addEventListener('load', renderCal);
+
+    /* ── Sticky CTA ── */
+    window.addEventListener('scroll', function() {
+        const hero = document.querySelector('.hero');
+        const bar  = document.getElementById('stickyCta');
+        if (bar && window.scrollY > hero.offsetHeight * 0.6) {
+            bar.classList.add('visible');
+        } else if (bar) {
+            bar.classList.remove('visible');
+        }
+    });
+    function dismissSticky() {
+        const bar = document.getElementById('stickyCta');
+        if (bar) bar.style.display = 'none';
+    }
 </script>
+
+<!-- Sticky CTA Bar -->
+<div class="sticky-cta" id="stickyCta">
+    <div class="sticky-cta-inner">
+        <div class="sticky-cta-text">Ready to take the next step? <strong>Free consultation — no obligation.</strong></div>
+        <div class="sticky-cta-btns">
+            <a href="#contact" class="sticky-btn-gold" onclick="dismissSticky()">Get Pre-Approved</a>
+            <a href="https://outlook.office.com/book/RaafayHussainMortgageConsultation@drewmortgage.com/?ismsaljsauthenabled" target="_blank" class="sticky-btn-white">Book a Call &#8599;</a>
+        </div>
+        <button class="sticky-cta-close" onclick="dismissSticky()" aria-label="Close">&#10005;</button>
+    </div>
+</div>
 
 </body>
 </html>
