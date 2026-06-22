@@ -327,6 +327,51 @@
         .form-submit:hover { background: var(--navy-dark); transform: translateY(-1px); }
         .form-disclaimer { font-size: 0.7rem; color: var(--text-light); margin-top: 0.75rem; line-height: 1.6; }
 
+        /* ── Calculator ── */
+        .calc-section { background: var(--navy-dark); }
+        .calc-section .section-tag { color: var(--gold); }
+        .calc-section .section-title { color: var(--white); }
+        .calc-section .section-subtitle { color: rgba(255,255,255,0.55); }
+        .calc-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; margin-top: 3rem; align-items: start; }
+        .calc-panel { background: white; border-radius: 16px; padding: 2rem; }
+        .calc-field { margin-bottom: 1.75rem; }
+        .calc-field:last-child { margin-bottom: 0; }
+        .calc-field-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.75rem; }
+        .calc-field-label { font-size: 0.82rem; font-weight: 600; color: var(--text); }
+        .calc-field-value { font-size: 1rem; font-weight: 700; color: var(--navy-dark); }
+        .calc-slider { width: 100%; -webkit-appearance: none; appearance: none; height: 5px; background: #e2e8f0; border-radius: 3px; outline: none; cursor: pointer; }
+        .calc-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--navy); cursor: pointer; border: 3px solid white; box-shadow: 0 2px 8px rgba(15,36,64,0.35); }
+        .calc-slider::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--navy); cursor: pointer; border: 3px solid white; box-shadow: 0 2px 8px rgba(15,36,64,0.35); }
+        .calc-slider-range { display: flex; justify-content: space-between; margin-top: 0.35rem; font-size: 0.68rem; color: var(--text-light); }
+        .calc-term-btns { display: flex; gap: 0.5rem; }
+        .calc-term-btn { flex: 1; padding: 0.625rem; border: 2px solid #e2e8f0; border-radius: 8px; background: white; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text); cursor: pointer; transition: all 0.2s; }
+        .calc-term-btn.active { border-color: var(--navy); background: var(--navy); color: white; }
+        .calc-term-btn:hover:not(.active) { border-color: var(--navy); }
+        .calc-monthly { text-align: center; padding: 1.5rem; background: linear-gradient(135deg, var(--navy-dark), var(--navy)); border-radius: 12px; margin-bottom: 1.5rem; }
+        .calc-monthly-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem; }
+        .calc-monthly-amount { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; color: var(--gold); line-height: 1; }
+        .calc-monthly-sub { font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 0.5rem; }
+        .calc-breakdown { margin-bottom: 1.25rem; }
+        .calc-breakdown-row { display: flex; justify-content: space-between; align-items: center; padding: 0.55rem 0; border-bottom: 1px solid #f0f4f8; font-size: 0.82rem; }
+        .calc-breakdown-row:last-child { border-bottom: none; }
+        .calc-breakdown-label { color: var(--text-light); }
+        .calc-breakdown-value { font-weight: 600; color: var(--navy-dark); }
+        .calc-pmi-note { font-size: 0.72rem; color: #92400e; background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 0.6rem 0.875rem; margin-bottom: 1.25rem; line-height: 1.55; display: none; }
+        .calc-lead-divider { border: none; border-top: 1px solid #e2e8f0; margin: 1.25rem 0; }
+        .calc-lead-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--navy-dark); margin-bottom: 0.25rem; }
+        .calc-lead-sub { font-size: 0.8rem; color: var(--text-light); margin-bottom: 1.25rem; line-height: 1.6; }
+        .calc-lead-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+        .calc-lead-group { margin-bottom: 0.75rem; }
+        .calc-lead-group label { display: block; font-size: 0.77rem; font-weight: 600; color: var(--text); margin-bottom: 0.35rem; }
+        .calc-lead-group input { width: 100%; padding: 0.65rem 0.875rem; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.875rem; color: var(--text); transition: border-color 0.2s; }
+        .calc-lead-group input:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(26,58,92,0.07); }
+        .calc-lead-btn { width: 100%; background: var(--gold); color: var(--navy-dark); border: none; padding: 0.9rem; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+        .calc-lead-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+        .calc-lead-btn:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+        .calc-disclaimer { font-size: 0.67rem; color: var(--text-light); margin-top: 0.75rem; line-height: 1.6; }
+        @media (max-width: 900px) { .calc-wrapper { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) { .calc-lead-row { grid-template-columns: 1fr; } .calc-monthly-amount { font-size: 2.4rem; } }
+
         /* ── Quiz ── */
         .quiz-section { background: var(--white); }
         .quiz-wrapper { max-width: 680px; margin: 3rem auto 0; background: var(--light); border-radius: 20px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 12px 50px rgba(0,0,0,0.07); }
@@ -459,6 +504,7 @@
         <a href="#" class="nav-logo">Raafay J. Hussain</a>
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
+            <li><a href="#calculator">Calculator</a></li>
             <li><a href="#quiz">Do I Qualify?</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#appointments">Book Appointment</a></li>
@@ -475,6 +521,7 @@
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
     <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#calculator" onclick="closeMenu()">Calculator</a>
     <a href="#quiz" onclick="closeMenu()">Do I Qualify?</a>
     <a href="#about" onclick="closeMenu()">About</a>
     <a href="#appointments" onclick="closeMenu()">Book Appointment</a>
@@ -733,6 +780,126 @@
     </div>
 </section>
 
+<!-- ── Mortgage Calculator ── -->
+<section class="calc-section" id="calculator">
+    <div class="section-inner">
+        <div class="section-tag">Payment Estimator</div>
+        <h2 class="section-title">Mortgage Calculator</h2>
+        <p class="section-subtitle">Move the sliders to estimate your monthly payment, then get a personalized rate quote from me directly.</p>
+
+        <div class="calc-wrapper">
+            <!-- Left: Inputs -->
+            <div class="calc-panel">
+                <div class="calc-field">
+                    <div class="calc-field-header">
+                        <span class="calc-field-label">Home Price</span>
+                        <span class="calc-field-value" id="calcPriceDisplay">$400,000</span>
+                    </div>
+                    <input type="range" class="calc-slider" id="calcPrice" min="100000" max="1500000" step="5000" value="400000" oninput="calcUpdate()">
+                    <div class="calc-slider-range"><span>$100K</span><span>$1.5M</span></div>
+                </div>
+
+                <div class="calc-field">
+                    <div class="calc-field-header">
+                        <span class="calc-field-label">Down Payment</span>
+                        <span class="calc-field-value" id="calcDownDisplay">10% ($40,000)</span>
+                    </div>
+                    <input type="range" class="calc-slider" id="calcDown" min="0" max="30" step="0.5" value="10" oninput="calcUpdate()">
+                    <div class="calc-slider-range"><span>0%</span><span>30%</span></div>
+                </div>
+
+                <div class="calc-field">
+                    <div class="calc-field-header">
+                        <span class="calc-field-label">Interest Rate</span>
+                        <span class="calc-field-value" id="calcRateDisplay">7.0%</span>
+                    </div>
+                    <input type="range" class="calc-slider" id="calcRate" min="3" max="12" step="0.125" value="7" oninput="calcUpdate()">
+                    <div class="calc-slider-range"><span>3%</span><span>12%</span></div>
+                </div>
+
+                <div class="calc-field">
+                    <div class="calc-field-header">
+                        <span class="calc-field-label">Loan Term</span>
+                    </div>
+                    <div class="calc-term-btns">
+                        <button class="calc-term-btn active" data-term="30" onclick="calcSetTerm(this)">30 Years</button>
+                        <button class="calc-term-btn" data-term="20" onclick="calcSetTerm(this)">20 Years</button>
+                        <button class="calc-term-btn" data-term="15" onclick="calcSetTerm(this)">15 Years</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Results + Lead Form -->
+            <div class="calc-panel">
+                <div class="calc-monthly">
+                    <div class="calc-monthly-label">Estimated Monthly Payment</div>
+                    <div class="calc-monthly-amount" id="calcMonthlyAmount">$2,988</div>
+                    <div class="calc-monthly-sub">Includes P&amp;I · taxes · insurance · PMI (if applicable)</div>
+                </div>
+
+                <div class="calc-breakdown">
+                    <div class="calc-breakdown-row">
+                        <span class="calc-breakdown-label">Principal &amp; Interest</span>
+                        <span class="calc-breakdown-value" id="calcPI">—</span>
+                    </div>
+                    <div class="calc-breakdown-row">
+                        <span class="calc-breakdown-label">Est. Property Tax</span>
+                        <span class="calc-breakdown-value" id="calcTax">—</span>
+                    </div>
+                    <div class="calc-breakdown-row">
+                        <span class="calc-breakdown-label">Est. Home Insurance</span>
+                        <span class="calc-breakdown-value" id="calcIns">—</span>
+                    </div>
+                    <div class="calc-breakdown-row">
+                        <span class="calc-breakdown-label">PMI</span>
+                        <span class="calc-breakdown-value" id="calcPMI">—</span>
+                    </div>
+                    <div class="calc-breakdown-row" style="font-weight:700;color:var(--navy-dark);">
+                        <span class="calc-breakdown-label" style="color:var(--navy-dark);font-weight:700;">Total Monthly Est.</span>
+                        <span class="calc-breakdown-value" id="calcTotal">—</span>
+                    </div>
+                    <div class="calc-breakdown-row">
+                        <span class="calc-breakdown-label">Loan Amount</span>
+                        <span class="calc-breakdown-value" id="calcLoanAmt">—</span>
+                    </div>
+                    <div class="calc-breakdown-row">
+                        <span class="calc-breakdown-label">Total Interest Paid</span>
+                        <span class="calc-breakdown-value" id="calcTotalInterest">—</span>
+                    </div>
+                </div>
+
+                <div class="calc-pmi-note" id="calcPmiNote">PMI applies when your down payment is under 20%. It can typically be removed once you reach 20% equity in your home.</div>
+
+                <hr class="calc-lead-divider">
+                <div class="calc-lead-title">Get Your Personalized Rate</div>
+                <div class="calc-lead-sub">These numbers are estimates. Get an exact rate based on your real profile — free, no obligation.</div>
+                <form id="calcLeadForm" onsubmit="submitCalcLead(event)">
+                    <div class="calc-lead-row">
+                        <div class="calc-lead-group">
+                            <label>First Name *</label>
+                            <input type="text" id="calcFirstName" placeholder="Jane" required>
+                        </div>
+                        <div class="calc-lead-group">
+                            <label>Last Name *</label>
+                            <input type="text" id="calcLastName" placeholder="Smith" required>
+                        </div>
+                    </div>
+                    <div class="calc-lead-group">
+                        <label>Email Address *</label>
+                        <input type="email" id="calcEmail" placeholder="jane@example.com" required>
+                    </div>
+                    <div class="calc-lead-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="calcPhone" placeholder="(508) 000-0000">
+                    </div>
+                    <button type="submit" class="calc-lead-btn" id="calcLeadBtn">Get My Personalized Rate &#8594;</button>
+                    <p class="calc-disclaimer">By submitting, you consent to be contacted by Raafay J. Hussain (NMLS# 2623740) at Drew Mortgage Associates Inc. (NMLS# 2856). Not a commitment to lend. All loans subject to credit approval.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ── Appointment Booking ── -->
 <section class="appointments" id="appointments">
     <div class="section-inner">
@@ -961,6 +1128,7 @@
             </div>
             <div class="footer-links">
                 <a href="#services">Services</a>
+                <a href="#calculator">Calculator</a>
                 <a href="#quiz">Do I Qualify?</a>
                 <a href="#about">About</a>
                 <a href="#appointments">Book Appointment</a>
@@ -1143,6 +1311,101 @@
     }
 
     window.addEventListener('load', renderCal);
+
+    /* ── Mortgage Calculator ── */
+    function calcUpdate() {
+        const price   = parseInt(document.getElementById('calcPrice').value);
+        const downPct = parseFloat(document.getElementById('calcDown').value);
+        const rate    = parseFloat(document.getElementById('calcRate').value);
+        const termBtn = document.querySelector('.calc-term-btn.active');
+        const term    = termBtn ? parseInt(termBtn.dataset.term) : 30;
+
+        const down = Math.round(price * downPct / 100);
+        const loan = price - down;
+        const r    = rate / 100 / 12;
+        const n    = term * 12;
+
+        const pi  = r === 0 ? loan / n : loan * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        const tax = price * 0.012 / 12;
+        const ins = price * 0.005 / 12;
+        const pmi = downPct < 20 ? loan * 0.008 / 12 : 0;
+        const total = pi + tax + ins + pmi;
+
+        const fmt = v => '$' + Math.round(v).toLocaleString();
+
+        document.getElementById('calcPriceDisplay').textContent = '$' + price.toLocaleString();
+        document.getElementById('calcDownDisplay').textContent  = downPct + '% (' + fmt(down) + ')';
+        document.getElementById('calcRateDisplay').textContent  = rate.toFixed(3).replace(/\.?0+$/, '') + '%';
+        document.getElementById('calcMonthlyAmount').textContent = fmt(total);
+        document.getElementById('calcPI').textContent           = fmt(pi);
+        document.getElementById('calcTax').textContent          = fmt(tax);
+        document.getElementById('calcIns').textContent          = fmt(ins);
+        document.getElementById('calcPMI').textContent          = pmi > 0 ? fmt(pmi) : '—';
+        document.getElementById('calcTotal').textContent        = fmt(total);
+        document.getElementById('calcLoanAmt').textContent      = fmt(loan);
+        document.getElementById('calcTotalInterest').textContent = fmt((pi * n) - loan);
+
+        document.getElementById('calcPmiNote').style.display = pmi > 0 ? 'block' : 'none';
+    }
+
+    function calcSetTerm(btn) {
+        document.querySelectorAll('.calc-term-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        calcUpdate();
+    }
+
+    async function submitCalcLead(e) {
+        e.preventDefault();
+        const btn = document.getElementById('calcLeadBtn');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        const price   = document.getElementById('calcPrice').value;
+        const downPct = document.getElementById('calcDown').value;
+        const rate    = document.getElementById('calcRate').value;
+        const termBtn = document.querySelector('.calc-term-btn.active');
+        const term    = termBtn ? termBtn.dataset.term : '30';
+        const monthly = document.getElementById('calcMonthlyAmount').textContent;
+
+        const firstName = document.getElementById('calcFirstName').value.trim();
+        const lastName  = document.getElementById('calcLastName').value.trim();
+        const email     = document.getElementById('calcEmail').value.trim();
+        const phone     = document.getElementById('calcPhone').value.trim();
+
+        const summary = `Mortgage Calculator: Price=$${parseInt(price).toLocaleString()} | Down=${downPct}% | Rate=${parseFloat(rate).toFixed(3).replace(/\.?0+$/,'')}% | Term=${term}yr | Est. Monthly=${monthly}`;
+        const fields = [
+            { name: 'firstname', value: firstName },
+            { name: 'lastname',  value: lastName },
+            { name: 'email',     value: email },
+            { name: 'phone',     value: phone },
+            { name: 'message',   value: summary }
+        ].filter(f => f.value !== '');
+
+        try {
+            const res = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/245340064/bd7ac999-988e-4e22-9c3f-7e68c446721b', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ submittedAt: Date.now(), fields, context: { pageUri: window.location.href, pageName: document.title } })
+            });
+            if (res.ok) {
+                btn.textContent = '✓ Sent! I\'ll reach out within 24 hours.';
+                btn.style.background = '#48bb78';
+                btn.style.color = 'white';
+                document.getElementById('calcLeadForm').reset();
+            } else { throw new Error(); }
+        } catch {
+            btn.textContent = 'Something went wrong — call (508) 439-3975';
+            btn.style.background = '#c53030';
+            btn.style.color = 'white';
+        }
+        setTimeout(() => {
+            btn.textContent = 'Get My Personalized Rate →';
+            btn.style.background = '';
+            btn.style.color = '';
+            btn.disabled = false;
+        }, 5000);
+    }
+
+    window.addEventListener('load', calcUpdate);
 
     /* ── Mortgage Quiz ── */
     const quizAnswers = {};
