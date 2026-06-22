@@ -327,6 +327,58 @@
         .form-submit:hover { background: var(--navy-dark); transform: translateY(-1px); }
         .form-disclaimer { font-size: 0.7rem; color: var(--text-light); margin-top: 0.75rem; line-height: 1.6; }
 
+        /* ── Quiz ── */
+        .quiz-section { background: var(--white); }
+        .quiz-wrapper { max-width: 680px; margin: 3rem auto 0; background: var(--light); border-radius: 20px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 12px 50px rgba(0,0,0,0.07); }
+        .quiz-progress { height: 4px; background: #e2e8f0; }
+        .quiz-progress-bar { height: 100%; background: var(--gold); transition: width 0.4s ease; width: 0%; }
+        .quiz-steps { padding: 2.5rem; }
+        .quiz-step { display: none; }
+        .quiz-step.active { display: block; animation: quizFade 0.3s ease; }
+        @keyframes quizFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-step-num { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+        .quiz-question { font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--navy-dark); margin-bottom: 1.75rem; line-height: 1.3; }
+        .quiz-step-sub { font-size: 0.875rem; color: var(--text-light); margin-top: -1rem; margin-bottom: 1.5rem; line-height: 1.6; }
+        .quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+        .quiz-options-2 { grid-template-columns: 1fr 1fr; }
+        .quiz-option { background: white; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.1rem 1.25rem; text-align: left; cursor: pointer; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.2rem; font-family: 'Inter', sans-serif; }
+        .quiz-option:hover { border-color: var(--navy); background: rgba(26,58,92,0.03); }
+        .quiz-option.selected { border-color: var(--navy); background: rgba(26,58,92,0.06); }
+        .quiz-option-icon { font-size: 1.3rem; margin-bottom: 0.2rem; }
+        .quiz-option-label { font-weight: 600; color: var(--navy-dark); font-size: 0.925rem; }
+        .quiz-option-desc { font-size: 0.77rem; color: var(--text-light); }
+        .quiz-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0; }
+        .quiz-form-group { margin-bottom: 1rem; }
+        .quiz-form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+        .quiz-form-group input { width: 100%; padding: 0.75rem 1rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--text); background: white; transition: border-color 0.2s; }
+        .quiz-form-group input:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(26,58,92,0.08); }
+        .quiz-submit-btn { width: 100%; background: var(--navy); color: white; border: none; padding: 1rem; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s; margin-top: 0.25rem; }
+        .quiz-submit-btn:hover { background: var(--navy-dark); transform: translateY(-1px); }
+        .quiz-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+        .quiz-form-disclaimer { font-size: 0.68rem; color: var(--text-light); margin-top: 0.75rem; line-height: 1.6; }
+        .quiz-results { padding: 2.5rem; display: none; }
+        .quiz-results-header { text-align: center; margin-bottom: 2rem; }
+        .quiz-results-check { width: 54px; height: 54px; background: #48bb78; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem; font-weight: 700; margin: 0 auto 1rem; }
+        .quiz-results-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--navy-dark); }
+        .quiz-programs { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
+        .quiz-program { background: white; border: 1px solid #e2e8f0; border-left: 4px solid var(--gold); border-radius: 10px; padding: 1.1rem 1.25rem; display: flex; align-items: flex-start; gap: 1rem; }
+        .quiz-program-icon { font-size: 1.35rem; flex-shrink: 0; margin-top: 1px; }
+        .quiz-program-name { font-weight: 700; color: var(--navy-dark); font-size: 0.95rem; margin-bottom: 0.2rem; }
+        .quiz-program-desc { font-size: 0.8rem; color: var(--text-light); line-height: 1.6; }
+        .quiz-results-cta { text-align: center; border-top: 1px solid #e2e8f0; padding-top: 2rem; }
+        .quiz-results-note { font-size: 0.8rem; color: var(--text-light); margin-bottom: 1.5rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        .quiz-results-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .quiz-btn-outline { border: 2px solid var(--navy); color: var(--navy) !important; padding: 0.9rem 2rem; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.25s; display: inline-block; }
+        .quiz-btn-outline:hover { border-color: var(--gold); color: var(--gold) !important; }
+        @media (max-width: 600px) {
+            .quiz-options { grid-template-columns: 1fr; }
+            .quiz-options-2 { grid-template-columns: 1fr 1fr; }
+            .quiz-form-row { grid-template-columns: 1fr; }
+            .quiz-steps, .quiz-results { padding: 1.75rem 1.5rem; }
+            .quiz-question { font-size: 1.2rem; }
+            .quiz-results-btns { flex-direction: column; }
+        }
+
         /* ── Sticky CTA Bar ── */
         .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: var(--navy-dark); border-top: 2px solid var(--gold); z-index: 998; padding: 0.875rem 2rem; box-shadow: 0 -4px 24px rgba(0,0,0,0.25); transform: translateY(100%); transition: transform 0.4s; }
         .sticky-cta.visible { transform: translateY(0); }
@@ -407,6 +459,7 @@
         <a href="#" class="nav-logo">Raafay J. Hussain</a>
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
+            <li><a href="#quiz">Do I Qualify?</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#appointments">Book Appointment</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -422,6 +475,7 @@
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
     <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#quiz" onclick="closeMenu()">Do I Qualify?</a>
     <a href="#about" onclick="closeMenu()">About</a>
     <a href="#appointments" onclick="closeMenu()">Book Appointment</a>
     <a href="#testimonials" onclick="closeMenu()">Reviews</a>
@@ -509,6 +563,173 @@
             <div class="service-card"><div class="service-icon">&#127968;</div><div class="service-title">Reverse Mortgage</div><p class="service-desc">Allow eligible homeowners aged 62+ to convert home equity into tax-free funds with no required monthly mortgage payments — while staying in your home.</p></div>
             <div class="service-card"><div class="service-icon">&#127981;</div><div class="service-title">Bank Statement Loans</div><p class="service-desc">Ideal for self-employed borrowers — qualify using 12–24 months of bank statements instead of traditional tax returns.</p></div>
         </div>
+    </div>
+</section>
+
+<!-- ── Mortgage Quiz ── -->
+<section class="quiz-section" id="quiz">
+    <div class="section-inner">
+        <div class="section-tag">Find Your Loan Match</div>
+        <h2 class="section-title">Can You Buy a Home in Massachusetts?</h2>
+        <p class="section-subtitle">Answer 5 quick questions and see which loan programs you may qualify for — takes under 2 minutes.</p>
+
+        <div class="quiz-wrapper">
+            <div class="quiz-progress"><div class="quiz-progress-bar" id="quizProgressBar"></div></div>
+
+            <div class="quiz-steps" id="quizSteps">
+
+                <!-- Q1: Credit Score -->
+                <div class="quiz-step active" data-step="1">
+                    <div class="quiz-step-num">Question 1 of 5</div>
+                    <h3 class="quiz-question">What is your estimated credit score?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-q="credit" data-v="under580" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">Below 580</span>
+                            <span class="quiz-option-desc">May need credit improvement</span>
+                        </button>
+                        <button class="quiz-option" data-q="credit" data-v="580to619" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">580 – 619</span>
+                            <span class="quiz-option-desc">Fair credit</span>
+                        </button>
+                        <button class="quiz-option" data-q="credit" data-v="620to679" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">620 – 679</span>
+                            <span class="quiz-option-desc">Good credit</span>
+                        </button>
+                        <button class="quiz-option" data-q="credit" data-v="680plus" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">680 or above</span>
+                            <span class="quiz-option-desc">Very good to excellent</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Q2: Income -->
+                <div class="quiz-step" data-step="2">
+                    <div class="quiz-step-num">Question 2 of 5</div>
+                    <h3 class="quiz-question">What is your approximate annual household income?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-q="income" data-v="under50k" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">Under $50,000</span>
+                        </button>
+                        <button class="quiz-option" data-q="income" data-v="50to80k" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">$50,000 – $80,000</span>
+                        </button>
+                        <button class="quiz-option" data-q="income" data-v="80to120k" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">$80,000 – $120,000</span>
+                        </button>
+                        <button class="quiz-option" data-q="income" data-v="120kplus" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">$120,000+</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Q3: Down Payment -->
+                <div class="quiz-step" data-step="3">
+                    <div class="quiz-step-num">Question 3 of 5</div>
+                    <h3 class="quiz-question">How much do you have saved for a down payment?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-q="down" data-v="0" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">Nothing saved yet</span>
+                            <span class="quiz-option-desc">0%</span>
+                        </button>
+                        <button class="quiz-option" data-q="down" data-v="3to5" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">A little</span>
+                            <span class="quiz-option-desc">3% – 5% of home price</span>
+                        </button>
+                        <button class="quiz-option" data-q="down" data-v="5to10" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">Moderate</span>
+                            <span class="quiz-option-desc">5% – 10% of home price</span>
+                        </button>
+                        <button class="quiz-option" data-q="down" data-v="10plus" onclick="quizSelect(this)">
+                            <span class="quiz-option-label">Strong</span>
+                            <span class="quiz-option-desc">10%+ of home price</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Q4: Veteran -->
+                <div class="quiz-step" data-step="4">
+                    <div class="quiz-step-num">Question 4 of 5</div>
+                    <h3 class="quiz-question">Are you a U.S. Veteran or active-duty service member?</h3>
+                    <div class="quiz-options quiz-options-2">
+                        <button class="quiz-option" data-q="veteran" data-v="yes" onclick="quizSelect(this)">
+                            <span class="quiz-option-icon">&#127894;</span>
+                            <span class="quiz-option-label">Yes</span>
+                            <span class="quiz-option-desc">Veteran / Active-duty / Surviving spouse</span>
+                        </button>
+                        <button class="quiz-option" data-q="veteran" data-v="no" onclick="quizSelect(this)">
+                            <span class="quiz-option-icon">&#127968;</span>
+                            <span class="quiz-option-label">No</span>
+                            <span class="quiz-option-desc">Civilian buyer</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Q5: First-Time Buyer -->
+                <div class="quiz-step" data-step="5">
+                    <div class="quiz-step-num">Question 5 of 5</div>
+                    <h3 class="quiz-question">Is this your first home purchase?</h3>
+                    <div class="quiz-options quiz-options-2">
+                        <button class="quiz-option" data-q="firsttime" data-v="yes" onclick="quizSelect(this)">
+                            <span class="quiz-option-icon">&#128273;</span>
+                            <span class="quiz-option-label">Yes</span>
+                            <span class="quiz-option-desc">First-time homebuyer</span>
+                        </button>
+                        <button class="quiz-option" data-q="firsttime" data-v="no" onclick="quizSelect(this)">
+                            <span class="quiz-option-icon">&#127969;</span>
+                            <span class="quiz-option-label">No</span>
+                            <span class="quiz-option-desc">I've owned a home before</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lead Gate -->
+                <div class="quiz-step" data-step="6">
+                    <div class="quiz-step-num">Almost There!</div>
+                    <h3 class="quiz-question">Where should I send your results?</h3>
+                    <p class="quiz-step-sub">Enter your contact info to see which programs you qualify for. No spam — ever.</p>
+                    <form id="quizLeadForm" onsubmit="submitQuizLead(event)">
+                        <div class="quiz-form-row">
+                            <div class="quiz-form-group">
+                                <label>First Name *</label>
+                                <input type="text" id="quizFirstName" placeholder="Jane" required>
+                            </div>
+                            <div class="quiz-form-group">
+                                <label>Last Name *</label>
+                                <input type="text" id="quizLastName" placeholder="Smith" required>
+                            </div>
+                        </div>
+                        <div class="quiz-form-group">
+                            <label>Email Address *</label>
+                            <input type="email" id="quizEmail" placeholder="jane@example.com" required>
+                        </div>
+                        <div class="quiz-form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="quizPhone" placeholder="(508) 000-0000">
+                        </div>
+                        <button type="submit" class="quiz-submit-btn" id="quizSubmitBtn">Show My Results &#8594;</button>
+                        <p class="quiz-form-disclaimer">By submitting, you consent to be contacted by Raafay J. Hussain (NMLS# 2623740) at Drew Mortgage Associates Inc. (NMLS# 2856) regarding your mortgage inquiry. Submission does not constitute a loan application or commitment to lend.</p>
+                    </form>
+                </div>
+
+            </div><!-- /quiz-steps -->
+
+            <!-- Results (hidden until lead submitted) -->
+            <div class="quiz-results" id="quizResults">
+                <div class="quiz-results-header">
+                    <div class="quiz-results-check">&#10003;</div>
+                    <h3 class="quiz-results-title">Based on your answers, you may qualify for:</h3>
+                </div>
+                <div class="quiz-programs" id="quizPrograms"></div>
+                <div class="quiz-results-cta">
+                    <p class="quiz-results-note">These are preliminary estimates based on your self-reported answers. Actual eligibility depends on a full review of your financial profile. Let's talk — it's free and there's no obligation.</p>
+                    <div class="quiz-results-btns">
+                        <a href="#contact" class="btn-primary">Get My Free Pre-Approval &#8594;</a>
+                        <a href="https://outlook.office.com/book/RaafayHussainMortgageConsultation@drewmortgage.com/?ismsaljsauthenabled" target="_blank" class="quiz-btn-outline">Book a Consultation &#8599;</a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /quiz-wrapper -->
     </div>
 </section>
 
@@ -740,6 +961,7 @@
             </div>
             <div class="footer-links">
                 <a href="#services">Services</a>
+                <a href="#quiz">Do I Qualify?</a>
                 <a href="#about">About</a>
                 <a href="#appointments">Book Appointment</a>
                 <a href="#testimonials">Reviews</a>
@@ -921,6 +1143,109 @@
     }
 
     window.addEventListener('load', renderCal);
+
+    /* ── Mortgage Quiz ── */
+    const quizAnswers = {};
+    let quizCurrentStep = 1;
+    const QUIZ_QUESTIONS = 5;
+
+    function quizSelect(btn) {
+        btn.closest('.quiz-options').querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        quizAnswers[btn.dataset.q] = btn.dataset.v;
+        setTimeout(quizAdvance, 360);
+    }
+
+    function quizAdvance() {
+        const cur = document.querySelector(`.quiz-step[data-step="${quizCurrentStep}"]`);
+        if (cur) cur.classList.remove('active');
+        quizCurrentStep++;
+        const next = document.querySelector(`.quiz-step[data-step="${quizCurrentStep}"]`);
+        if (next) next.classList.add('active');
+        const pct = Math.min(((quizCurrentStep - 1) / QUIZ_QUESTIONS) * 100, 100);
+        document.getElementById('quizProgressBar').style.width = pct + '%';
+    }
+
+    async function submitQuizLead(e) {
+        e.preventDefault();
+        const btn = document.getElementById('quizSubmitBtn');
+        btn.textContent = 'Processing...';
+        btn.disabled = true;
+
+        const firstName = document.getElementById('quizFirstName').value.trim();
+        const lastName  = document.getElementById('quizLastName').value.trim();
+        const email     = document.getElementById('quizEmail').value.trim();
+        const phone     = document.getElementById('quizPhone').value.trim();
+
+        const summary = `Quiz: Credit=${quizAnswers.credit||'?'} | Income=${quizAnswers.income||'?'} | Down=${quizAnswers.down||'?'} | Veteran=${quizAnswers.veteran||'?'} | FirstTime=${quizAnswers.firsttime||'?'}`;
+        const fields = [
+            { name: 'firstname', value: firstName },
+            { name: 'lastname',  value: lastName },
+            { name: 'email',     value: email },
+            { name: 'phone',     value: phone },
+            { name: 'message',   value: summary }
+        ].filter(f => f.value !== '');
+
+        try {
+            await fetch('https://api.hsforms.com/submissions/v3/integration/submit/245340064/bd7ac999-988e-4e22-9c3f-7e68c446721b', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ submittedAt: Date.now(), fields, context: { pageUri: window.location.href, pageName: document.title } })
+            });
+        } catch (_) {}
+
+        showQuizResults();
+    }
+
+    function showQuizResults() {
+        document.getElementById('quizSteps').style.display = 'none';
+        document.getElementById('quizProgressBar').style.width = '100%';
+        const resultsEl  = document.getElementById('quizResults');
+        const programsEl = document.getElementById('quizPrograms');
+        resultsEl.style.display = 'block';
+        programsEl.innerHTML = '';
+
+        const credit    = quizAnswers.credit    || 'under580';
+        const income    = quizAnswers.income    || 'under50k';
+        const down      = quizAnswers.down      || '0';
+        const veteran   = quizAnswers.veteran   === 'yes';
+        const firsttime = quizAnswers.firsttime === 'yes';
+
+        const programs = [];
+
+        if (veteran) {
+            programs.push({ icon: '&#127894;', name: 'VA Loan', desc: 'As a veteran or active-duty service member you may qualify for a VA Loan — often with $0 down payment and no private mortgage insurance (PMI). One of the best loan programs available.' });
+        }
+
+        if (down === '0' && income !== '120kplus') {
+            programs.push({ icon: '&#127806;', name: 'USDA Loan', desc: 'If your target home is in a qualifying rural or suburban area, USDA loans offer 100% financing with no down payment required and competitive interest rates.' });
+        }
+
+        const fhaCredit = ['580to619','620to679','680plus'];
+        const fhaDown   = ['3to5','5to10','10plus'];
+        if (fhaCredit.includes(credit) && fhaDown.includes(down)) {
+            programs.push({ icon: '&#127968;', name: 'FHA Loan', desc: 'With a 580+ credit score and as little as 3.5% down, FHA loans are a strong option for buyers who don\'t have perfect credit or a large down payment saved.' });
+        }
+
+        if (firsttime && fhaCredit.includes(credit) && income !== '120kplus') {
+            programs.push({ icon: '&#127963;', name: 'MassHousing Loan', desc: 'As a first-time homebuyer in Massachusetts, you may qualify for MassHousing programs with competitive rates, low down payments, and down payment assistance options.' });
+        }
+
+        const convCredit = ['620to679','680plus'];
+        const convDown   = ['5to10','10plus'];
+        if (convCredit.includes(credit) && convDown.includes(down)) {
+            programs.push({ icon: '&#128203;', name: 'Conventional Loan', desc: 'With a 620+ credit score and 5%+ down, you may qualify for a conventional loan — offering flexibility on property type and lower long-term costs once PMI is removed.' });
+        }
+
+        if (programs.length === 0) {
+            programs.push({ icon: '&#128172;', name: 'Let\'s Talk — There Are Options', desc: 'Based on your current answers, the path forward may require a personalized conversation. There are often programs and strategies specific to your situation that aren\'t captured in a quiz.' });
+        }
+
+        programs.forEach(p => {
+            programsEl.innerHTML += `<div class="quiz-program"><div class="quiz-program-icon">${p.icon}</div><div><div class="quiz-program-name">${p.name}</div><div class="quiz-program-desc">${p.desc}</div></div></div>`;
+        });
+
+        resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 
     /* ── Sticky CTA ── */
     window.addEventListener('scroll', function() {
