@@ -497,6 +497,7 @@
             }
             .services-grid::-webkit-scrollbar { display: none; }
             .service-card { min-width: 260px; flex-shrink: 0; scroll-snap-align: start; }
+            .services-scroll-hint { display: block !important; text-align: center; }
             .process-steps { grid-template-columns: 1fr; }
             .section-title { font-size: 1.7rem; }
             .hero-headline { font-size: 1.9rem; }
@@ -615,6 +616,7 @@
         <div class="section-tag">What I Offer</div>
         <h2 class="section-title">Loan Programs for Every Buyer</h2>
         <p class="section-subtitle">From first-time buyers to seasoned investors, I offer a wide range of loan products tailored to your unique financial situation.</p>
+        <p class="services-scroll-hint" style="font-size:.78rem;color:var(--text-light);margin-bottom:.5rem;display:none;">&#8592; Swipe to see all 9 programs &#8594;</p>
         <div class="services-grid">
             <a href="conventional-loans.html" class="service-card" style="text-decoration:none;"><div class="service-icon">&#127968;</div><div class="service-title">Conventional Loans</div><p class="service-desc">Flexible financing for qualified buyers with competitive rates and a variety of down payment options for primary, second, and investment properties.</p><div style="margin-top:1rem;font-size:.78rem;font-weight:600;color:var(--gold);">Learn more &#8594;</div></a>
             <a href="fha-loans.html" class="service-card" style="text-decoration:none;"><div class="service-icon">&#127775;</div><div class="service-title">FHA Loans</div><p class="service-desc">Government-backed loans ideal for first-time homebuyers with lower credit score requirements and low minimum down payment requirements.</p><div style="margin-top:1rem;font-size:.78rem;font-weight:600;color:var(--gold);">Learn more &#8594;</div></a>
@@ -625,6 +627,9 @@
             <a href="dscr-loans.html" class="service-card" style="text-decoration:none;"><div class="service-icon">&#128200;</div><div class="service-title">DSCR Loans</div><p class="service-desc">Debt Service Coverage Ratio loans for real estate investors — qualify based on property rental income rather than personal income to grow your portfolio.</p><div style="margin-top:1rem;font-size:.78rem;font-weight:600;color:var(--gold);">Learn more &#8594;</div></a>
             <a href="reverse-mortgage.html" class="service-card" style="text-decoration:none;"><div class="service-icon">&#127968;</div><div class="service-title">Reverse Mortgage</div><p class="service-desc">Allow eligible homeowners aged 62+ to convert home equity into tax-free funds with no required monthly mortgage payments — while staying in your home.</p><div style="margin-top:1rem;font-size:.78rem;font-weight:600;color:var(--gold);">Learn more &#8594;</div></a>
             <a href="bank-statement-loans.html" class="service-card" style="text-decoration:none;"><div class="service-icon">&#127981;</div><div class="service-title">Bank Statement Loans</div><p class="service-desc">Ideal for self-employed borrowers — qualify using 12–24 months of bank statements instead of traditional tax returns.</p><div style="margin-top:1rem;font-size:.78rem;font-weight:600;color:var(--gold);">Learn more &#8594;</div></a>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem;">
+            <a href="loan-programs.html" style="display:inline-flex;align-items:center;gap:.6rem;background:var(--navy);color:var(--white);padding:.9rem 2rem;border-radius:8px;font-weight:700;font-size:.95rem;text-decoration:none;transition:all .2s;box-shadow:0 4px 16px rgba(15,36,64,.2);" onmouseover="this.style.background='var(--navy-dark)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--navy)';this.style.transform=''">View All 9 Loan Programs &#8594;</a>
         </div>
     </div>
 </section>
